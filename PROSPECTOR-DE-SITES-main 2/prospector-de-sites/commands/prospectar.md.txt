@@ -1,0 +1,21 @@
+---
+description: Busca no Google Maps prestadores de serviços PMEs com sites ruins e gera a lista de leads
+argument-hint: "[nicho] [cidade]"
+---
+
+Prospecte leads qualificados.
+
+## Preparação
+1. Determine o nicho e a cidade. Foco estrito em: advogados, engenheiros, consultorias, clínicas de saúde/estética e empresas de TI.
+2. Leia `leads.md` na pasta conectada para excluir profissionais já avaliados.
+
+## Execução
+Use o Claude in Chrome para varrer o Google Maps:
+- Buscar "[nicho] em [cidade]"
+- Avaliar até atingir a meta de leads qualificados.
+- Critérios de aprovação: nota alta (≥ 4.7), avaliações consistentes (≥ 40), site ATIVO porém obsoleto, e-mail público.
+- Critérios de descarte imediato (NÃO prospectar): profissionais autônomos de baixo orçamento, negócios com verba aparente muito restrita, sites já modernos ou em plataformas fechadas inalteráveis.
+
+## Saída
+- Guarde os dados extraídos (nome, nota, WhatsApp, e-mail, URL atual, motivo do descarte/aprovação) numa folha de cálculo do Google via conector.
+- Atualize o `leads.md` e o `dashboard.html` local.

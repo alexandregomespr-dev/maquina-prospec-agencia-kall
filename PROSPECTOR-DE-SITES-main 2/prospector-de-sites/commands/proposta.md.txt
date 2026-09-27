@@ -1,0 +1,26 @@
+---
+description: Escreve e cria rascunhos de propostas focadas em previsibilidade técnica e conversão
+argument-hint: "[nome do cliente ou todos]"
+---
+
+Crie as propostas comerciais para os leads publicados.
+
+## 1. Diretrizes de Escrita e Tom de Voz
+- Escreva o e-mail utilizando os dados reais do lead.
+- A estrutura deve ser empática, direta e estritamente profissional.
+- **Proibido:** Usar clichês de marketing, promessas irreais ou linguagem demasiado comercial.
+- Utilize quebras de linha constantes e tópicos para facilitar a leitura. Nunca escreva blocos de texto corridos ou densos.
+
+## 2. Argumento de Venda (O Diferencial)
+- Elogie o negócio com base nas avaliações reais do Google Maps.
+- Aponte, de forma rigorosa e objetiva, a falha no site atual que está a causar a perda de conversões.
+- Apresente a nova versão desenvolvida (utilizando o link da página-capa como a ÚNICA hiperligação do e-mail).
+- Destaque que a nova estrutura não é apenas visual, sublinhando que já contém:
+  * Rastreamento avançado (GTM e GA4) para garantir clareza absoluta no Retorno sobre o Investimento (ROI).
+  * Estrutura de SEO otimizada para as novas exigências de pesquisa por IA do Google (SGE).
+- NUNCA mencione preços nesta fase. O objetivo único é agendar uma conversa.
+
+## 3. Validação e Saída
+- Valide o texto contra filtros anti-spam: elimine palavras de gatilho promocionais e mantenha o assunto do e-mail curto e em formato de pergunta.
+- Guarde o e-mail como rascunho no Gmail (via conector).
+- Resuma as propostas criadas e atualize o banco de dados local.

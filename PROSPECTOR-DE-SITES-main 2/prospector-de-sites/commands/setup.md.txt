@@ -1,0 +1,29 @@
+---
+description: Configura o plugin — assinatura, preferências de ICP e conexão com a Hostinger
+---
+
+Configure o ambiente da Máquina de Prospeção.
+
+## 1. Pasta de trabalho
+Verifique se há uma pasta do usuário conectada para salvar o CRM e os arquivos gerados.
+
+## 2. Dados de Prospecção e Assinatura
+Colete os seguintes dados do usuário:
+- **Assinatura da proposta**: Nome completo, cargo e WhatsApp.
+- **Nichos padrão de prospecção**: Use estritamente o nosso ICP: Advogados, Engenheiros, Consultorias, Clínicas e TI.
+- **Cidade/região padrão**.
+
+## 3. Conexão com a Hostinger
+Instrua o usuário a configurar o deploy via FTPS posteriormente. Nunca solicite ou exiba senhas de servidor no chat.
+
+## 4. Salvar Configuração
+Salve os dados em `prospector-config.json` na pasta conectada, estritamente neste formato:
+
+{
+  "assinatura": { "nome": "", "apresentacao": "", "whatsapp": "" },
+  "prospeccao": { "nichos": ["advogados", "engenheiros", "consultorias", "clinicas", "ti"], "cidade": "", "leadsPorBusca": 10 },
+  "envio": { "modo": "rascunho" }
+}
+
+## 5. Encerrar
+Confirme o que foi salvo e explique o ciclo da operação: `/prospectar` → `/redesenhar` → `/publicar` → `/proposta`.

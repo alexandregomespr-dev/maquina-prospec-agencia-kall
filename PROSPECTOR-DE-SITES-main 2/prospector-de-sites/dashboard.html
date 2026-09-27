@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM | Agência Kall Alexandre</title>
+    <style>
+        :root {
+            --brand-orange: #f07c00;
+            --brand-black: #000000;
+            --brand-white: #ffffff;
+            --bg-gray: #f4f5f7;
+            --border-color: #e1e4e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            color: var(--brand-black);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background-color: var(--brand-black);
+            color: var(--brand-white);
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: var(--brand-orange);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--brand-white);
+        }
+
+        .nav-item {
+            padding: 12px 0;
+            color: #a0aab2;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--brand-white);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .header {
+            background-color: var(--brand-white);
+            padding: 24px 40px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-orange);
+            color: var(--brand-white);
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        /* Metrics */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 30px 40px 10px;
+        }
+
+        .metric-card {
+            background-color: var(--brand-white);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .metric-title {
+            font-size: 13px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--brand-black);
+        }
+
+        .metric-value.orange {
+            color: var(--brand-orange);
+        }
+
+        /* Kanban Board */
+        .kanban-board {
+            display: flex;
+            gap: 20px;
+            padding: 20px 40px 40px;
+            flex: 1;
+            overflow-x: auto;
+        }
+
+        .kanban-column {
+            background-color: #ebecf0;
+            border-radius: 8px;
+            width: 300px;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+        }
+
+        .column-header {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding: 0 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            background-color: var(--brand-white);
+            padding: 16px;
+            border-radius: 6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+            cursor: grab;
+            border-left: 4px solid var(--brand-orange);
+        }
+
+        .card:active {
+            cursor: grabbing;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .card-niche {
+            font-size: 12px;
+            color: #666;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .card-footer {
+            font-size: 12px;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">AGÊNCIA <span>KALL</span></div>
+        <a class="nav-item active">Pipeline de Vendas</a>
+        <a class="nav-item">Clientes Ativos</a>
+        <a class="nav-item">Infraestrutura (SGE)</a>
+        <a class="nav-item">Configurações</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Pipeline e Previsibilidade</h1>
+            <button class="btn-primary" onclick="alert('Funcionalidade de sincronização manual ativa na próxima versão.')">+ Sincronizar Leads</button>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">MRR Previsto</div>
+                <div class="metric-value orange">R$ 12.500</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Leads PME Qualificados</div>
+                <div class="metric-value">24</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Propostas Ativas</div>
+                <div class="metric-value">8</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Taxa de Conversão</div>
+                <div class="metric-value">18%</div>
+            </div>
+        </div>
+
+        <div class="kanban-board">
+            <!-- Coluna 1 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span>1. Prospetados (SGE)</span>
+                    <span>3</span>
+                </div>
+                <div class="card" draggable="true">
+                    <div class="card-title">Consultoria Apex</div>
+                    <div class="card-niche">Consultoria</div>
+                    <div class="card-footer"><span>Site Obsoleto</span><span>Nota: 4.8</span></div>
+                </div>
+                <div class="card" draggable="true">
+                    <div class="card-title">Clínica Sorriso</div>
+                    <div class="card-niche">Clínica</div>
+                    <div class="card-footer"><span>Sem GA4</span><span>Nota: 4.9</span></div>
+                </div>
+            </div>
+
+            <!-- Coluna 2 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span>2. Redesenhados</span>
+                    <span>1</span>
+                </div>
+                <div class="card" draggable="true">
+                    <div class="card-title">Martins Advogados</div>
+                    <div class="card-niche">Advocacia</div>
+                    <div class="card-footer"><span>GTM Injetado</span><span>Nota: 5.0</span></div>
+                </div>
+            </div>
+
+            <!-- Coluna 3 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span>3. Proposta Enviada</span>
+                    <span>2</span>
+                </div>
+                <div class="card" draggable="true">
+                    <div class="card-title">TechSolutions TI</div>
+                    <div class="card-niche">Tecnologia</div>
+                    <div class="card-footer"><span>Enviado há 2 dias</span><span>MRR: R$ 1.500</span></div>
+                </div>
+            </div>
+
+            <!-- Coluna 4 -->
+            <div class="kanban-column">
+                <div class="column-header">
+                    <span>4. Fechado (Win)</span>
+                    <span>1</span>
+                </div>
+                <div class="card" style="border-left-color: #3f7d4e;" draggable="true">
+                    <div class="card-title">Engenharia Costa</div>
+                    <div class="card-niche">Engenharia</div>
+                    <div class="card-footer"><span style="color: #3f7d4e; font-weight: bold;">Contrato Assinado</span><span>MRR: R$ 2.000</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

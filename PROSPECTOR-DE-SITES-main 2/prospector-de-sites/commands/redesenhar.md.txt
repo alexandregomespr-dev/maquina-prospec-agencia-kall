@@ -1,0 +1,26 @@
+---
+description: Redesenha os sites dos leads preservando a identidade original e injetando tracking/SEO avançado
+argument-hint: "[URLs ou nomes dos leads]"
+---
+
+Redesenhe as páginas dos leads. 
+
+## 1. Extração e Fidelidade Visual
+Abra o site original. Extraia textos, serviços e OBRIGATORIAMENTE os URLs reais do logótipo e das fotos originais. Mantenha estritamente a identidade visual (cores, tipografia) da empresa prospetada. NADA inventado. O logótipo original e as fotos originais DEVEM aparecer obrigatoriamente na página nova.
+
+## 2. Infraestrutura de Conversão (Regra de Ouro)
+- Injete nativamente as tags base do Google Tag Manager (GTM) e Google Analytics 4 (GA4) no `<head>` e `<body>`.
+- Estruture botões de CTA claros a apontar diretamente para o WhatsApp do cliente.
+
+## 3. Preparação para SGE (Google 2026)
+- Adicione marcação JSON-LD Schema.org completa (LocalBusiness ou ProfessionalService).
+- Otimize a semântica do HTML5 (H1, H2, tags de artigo) para leitura clara por IA e motores de busca.
+
+## 4. Guardar e Comparar
+Guarde na pasta conectada:
+- `sites/[slug]/[slug].html` (página final)
+- `sites/[slug]/[slug]-editor.html` (versão editável)
+- Atualize OBRIGATORIAMENTE o ficheiro `comparar.html` na raiz com o antes e depois.
+
+## 5. Saída
+Apresente os cartões de ficheiro no chat (comparador primeiro), faça um resumo de 1 linha por cliente sobre o que melhorou tecnicamente e confirme a atualização do dashboard local.
